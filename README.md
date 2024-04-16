@@ -1,6 +1,6 @@
 A simple web app to interact with the Official Joke API (https://github.com/15Dkatz/official_joke_api) and get some jokes randomly, by type or by ID.
 
-It uses HTML, CSS, JavaScript, Node.js, Express, and Axios.
+It uses EJS, CSS, JavaScript, Node.js, Express, and Axios.
 
 How To Use
 1. Clone repository or download the ZIP file.
