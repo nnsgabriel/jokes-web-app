@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jokes Web App</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="heading">
+                <h1>This Web App Is A Joke</h1>
+                <p>Actually, it's an interface to interact with the <a class="api-link" href="https://github.com/15Dkatz/official_joke_api">Official Joke API</a> and get some jokes. Try it out:</p>
+            </div>
+            
+            <div class="buttons">
+                <form id="get-form" method="GET">
+                    <input id="random-joke" class="button get-button" type="submit" value="Get Random Joke" formaction="/random-joke">
+                    <input id="ten-random-jokes" class="button get-button" type="submit" value="Get 10 Random Jokes" formaction="/10-random-jokes">
+                </form>
+
+                <form id="type-form" method="POST">
+                    <select required id="dropdown" class="button" name="type" class="form-select">
+                        <option value="" data-display="Select">Select</option>
+                        <option value="general">General</option>
+                        <option value="programming">Programming</option>
+                        <option value="dad">Dad</option>
+                        <option value="knock-knock">Knock-Knock</option>
+                    </select>
+                    <input id="random-joke-by-type" class="button get-button" type="submit" value="Get a Random Joke by Type" formaction="/random-joke-by-type">
+                    <input id="ten-jokes-by-type" class="button get-button" type="submit" value="Get 10 Random Jokes by Type" formaction="/10-jokes-by-type">
+                </form>
+
+                <form id="id-form" method="POST">
+                    <input required type="text" id="idInput" class="button" name="id" placeholder="ID">
+                    <input type="submit" id="joke-by-id" class="button get-button" value="Get Joke by ID" formaction="/joke-by-id">
+                </form>
+            </div>
+
+            <div class="content">
+                <% if (locals.setups && locals.punchlines) { %>
+                    <% setups.forEach((setup, index) => { %>
+                        <div class="joke">
+                            <p><%= setup %></p>
+                            <p><%= punchlines[index] %></p>   
+                        </div>
+                    <% }) %>
+                <% } else { %>
+                    <div class="joke">
+                        <p>Jokes will appear here.</p>
+                    </div>
+                <% } %>
+            </div>
+
+            <footer>
+                <p>© <%= new Date().getFullYear() %> Gabriel Nogueira</p>
+                <p>Jokes from the <a class="api-link" href="https://github.com/15Dkatz/official_joke_api">Official Joke API</a>.</p>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3rem;
+}
+
+.content {
+    padding: 30px;
+}
+
+.api-link {
+    color: white;
+}
+
+.heading, .buttons, .content {
+    margin-bottom: 50px;
+}
+
+.joke {
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: hsl(211, 100%, 20%);
+}
+
+.button {
+    width: 215px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    background-color: hsl(209, 100%, 25%);
+    color: white;
+    font-size: 14px;
+}
+
+.get-button:hover {
+    background-color: hsl(209, 100%, 35%);
+}
+
+.get-button:active {
+    background-color: hsl(209, 100%, 45%);
+}
+
+#idInput {
+    width: 25px;
+    cursor: text;
+    background-color: hsl(209, 100%, 15%);
+}
+
+#dropdown {
+    width: 150px;
+    background-color: hsl(209, 100%, 15%);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #001d3d;
+    color: white;
+}
